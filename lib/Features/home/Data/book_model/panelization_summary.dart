@@ -7,29 +7,15 @@ class PanelizationSummary {
     this.containsImageBubbles,
   });
 
-  // factory PanelizationSummary.fromJson(Map<String, dynamic> json) {
-  //   return PanelizationSummary(
-  //     containsEpubBubbles: json['containsEpubBubbles'] as bool?,
-  //     containsImageBubbles: json['containsImageBubbles'] as bool?,
-  //   );
-  // }
-
-  // Map<String, dynamic> toJson() => {
-  //       'containsEpubBubbles': containsEpubBubbles,
-  //       'containsImageBubbles': containsImageBubbles,
-  //     };
-
-  Map<String, dynamic> toMap() {
-    return {
-      'containsEpubBubbles': containsEpubBubbles,
-      'containsImageBubbles': containsImageBubbles,
-    };
-  }
-
-  factory PanelizationSummary.fromMap(Map<String, dynamic> map) {
+  factory PanelizationSummary.fromJson(Map<String, dynamic> json) {
     return PanelizationSummary(
-      containsEpubBubbles: map['containsEpubBubbles'],
-      containsImageBubbles: map['containsImageBubbles'],
+      containsEpubBubbles: json['containsEpubBubbles'] as bool?,
+      containsImageBubbles: json['containsImageBubbles'] as bool?,
     );
   }
+
+  Map<String, dynamic> toJson() => {
+        'containsEpubBubbles': containsEpubBubbles,
+        'containsImageBubbles': containsImageBubbles,
+      };
 }
